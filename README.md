@@ -1,11 +1,13 @@
 Plantas que crecen en Colombia:
 
 * Melón
+* Calabaza
 * Totumo
 * Palmera
 * Guayacán
 * Cocotero
 * Platanero
+* Lechuga
 * Mata de piña
 * Mata de café
 * Orquídea
@@ -14,4 +16,6 @@ Plantas que crecen en Colombia:
 * Achira
 * Caña de azúcar
 * Cocoa
+* Brocoli
 * Girasol
+* Zuchini
