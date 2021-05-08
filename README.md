@@ -13,3 +13,4 @@ Plantas que crecen en Colombia:
 * Achira
 * Caña de azúcar
 * Cocoa
+* Girasol
