@@ -19,3 +19,4 @@ Plantas que crecen en Colombia:
 * Brocoli
 * Girasol
 * Zuchini
+* Pepino
