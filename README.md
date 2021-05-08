@@ -4,3 +4,4 @@ Plantas que crecen en Colombia:
 * Cocotero
 * Platanero
 * Mata de café
+* Pino
