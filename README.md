@@ -15,3 +15,4 @@ Plantas que crecen en Colombia:
 * Caña de azúcar
 * Cocoa
 * Girasol
+* Pepino
