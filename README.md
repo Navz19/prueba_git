@@ -8,6 +8,7 @@ Plantas que crecen en Colombia:
 * Platanero
 * Mata de piña
 * Mata de café
+* Orquidea
 * Uchuva
 * Pino
 * Achira
