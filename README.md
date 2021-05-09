@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Navz19/prueba_git.svg?branch=master)](https://travis-ci.com/Navz19/prueba_git)
+
 Plantas que crecen en Colombia:
 
 * Melón
