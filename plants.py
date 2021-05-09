@@ -22,6 +22,7 @@ COLOMBIAN_PLANTS = [
     'Girasol',
     'Zuchini',
     'Pepino',
+    'Granadilla',
 ]
 
 
