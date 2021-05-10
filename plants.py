@@ -63,3 +63,4 @@ def get_random_plant(plant_type=None):
         return random.choice(PLANT_TYPE_FLOWER)
     if plant_type not in PLANT_TYPES:
         raise TypeError(f"Plant type '{plant_type}' is not allowed")
+    return None
