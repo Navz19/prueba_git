@@ -1,5 +1,5 @@
 import random
-
+COLOMBIAN_PLANTS = dict(
 PLANT_TYPE_FRUIT = [
     'Melón',
     'Cocotero',
@@ -7,60 +7,33 @@ PLANT_TYPE_FRUIT = [
     'Mata de piña',
     'Uchuva',
     'Granadilla'
-]
+],
 PLANT_TYPE_VEGETABLE = [
     'Calabaza',
     'Lechuga',
     'Brocoli',
     'Zuchini'
-]
-
+],
 PLANT_TYPE_FLOWER = [
     'Guayacán',
     'Orquídea',
-    'girasol'
-]
-
-PLANT_TYPES = [
-    'fruta',
-    'verdura',
-    'flor'
-]
-
-COLOMBIAN_PLANTS = [
-    'Melón', 
-    'Calabaza', 
-    'Totumo', 
-    'Palmera', 
-    'Guayacán',
-    'Cocotero',
-    'Platanero',
-    'Lechuga',
-    'Mata de piña',
+    'Girasol'
+],
+PLANT_TYPE_OTHER = [
+    'Totumo',
+    'Palmera',
     'Mata de café',
-    'Orquídea',
-    'Uchuva',
     'Pino',
     'Achira',
     'Caña de azúcar',
-    'Cocoa',
-    'Brocoli',
-    'Girasol',
-    'Zuchini',
-    'Pepino',
-    'Granadilla',
-]
+    'Cocoa'
+])
 
 
 def get_random_plant(plant_type=None):
     if plant_type is None:
-        return random.choice(COLOMBIAN_PLANTS)
-    if plant_type == 'fruta':
-        return random.choice(PLANT_TYPE_FRUIT)
-    if plant_type == 'verdura':
-        return random.choice(PLANT_TYPE_VEGETABLE)
-    if plant_type == 'flor':
-        return random.choice(PLANT_TYPE_FLOWER)
-    if plant_type not in PLANT_TYPES:
-        raise TypeError(f"Plant type '{plant_type}' is not allowed")
-    return None
+        random_type = random.choice(list(COLOMBIAN_PLANTS.keys()))
+        return random.choice(COLOMBIAN_PLANTS[random_type])
+    if plant_type in COLOMBIAN_PLANTS.keys():
+        return random.choice(COLOMBIAN_PLANTS[plant_type])
+    raise KeyError(f"Plant type '{plant_type}' is not allowed")
