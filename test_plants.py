@@ -1,22 +1,19 @@
-from plants import COLOMBIAN_PLANTS, PLANT_TYPE_FRUIT, PLANT_TYPE_VEGETABLE, PLANT_TYPE_FLOWER
+import pytest
+from plants import COLOMBIAN_PLANTS, PlantTypeDoesNotExistsError
 from plants import get_random_plant
 
 def test_successfully_get_random_plant():
     random_plant = get_random_plant()
-    assert type(random_plant) == str
-    assert (random_plant in COLOMBIAN_PLANTS) is True
+    assert isinstance(random_plant, str)
+    assert any(random_plant in plant_type_list for plant_type_list in COLOMBIAN_PLANTS.values())
 
-def test_successfully_get_random_fruit():
-    random_fruit = get_random_plant(plant_type='fruta')
-    assert type(random_fruit) == str
-    assert (random_fruit in PLANT_TYPE_FRUIT) is True
-
-def test_successfully_get_random_vegetable():
-    random_vegetable = get_random_plant(plant_type='verdura')
-    assert type(random_vegetable) == str
-    assert (random_vegetable in PLANT_TYPE_VEGETABLE) is True
-
-def test_successfully_get_random_flower():
-    random_flower = get_random_plant(plant_type='flor')
-    assert type(random_flower) == str
-    assert (random_flower in PLANT_TYPE_FLOWER) is True
+def test_successfully_get_random_plant_by_type():
+    for plant_type in COLOMBIAN_PLANTS.keys():
+        random_plant = get_random_plant(plant_type)
+        assert isinstance(random_plant, str)
+        assert any(random_plant in plant_type_list for plant_type_list in COLOMBIAN_PLANTS.values())
+    
+def test_get_random_plant_invalid_type():
+    unregistered_plant_type = "Azul"
+    with pytest.raises(PlantTypeDoesNotExistsError):
+        get_random_plant(unregistered_plant_type)
